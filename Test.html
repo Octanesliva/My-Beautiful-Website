@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Beautiful Webesite</title>
+
+    <style>
+        /*GENERAL STYLING*/
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+         }
+
+        body{
+        font-family: Arial, sans-serif;
+        background: 3f2f6ff;
+        color: #222;
+
+        }
+
+        /*HEADER*/
+        header{
+            background: linear-gradient(135deg, #0d47a1, #1976d2);
+            color: white;
+            text-align: center;
+            padding: 35px 20px
+        }
+
+        header h1{
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        header p{
+            font-size: 18px;
+            
+        }
+
+        /*NAVIGATION*/
+        nav{
+            background: #082c5c;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        nav a{
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight:bold;
+        }
+
+        nav a:hover{
+            color:#ffd700;
+        }
+
+        /*MAIN CONTAINER*/
+        .container{
+            width: 90%;
+            max-width:1100px;
+            margin:auto;
+            padding: 30px 0;
+        }
+
+        /*WELCOME SECTION*/
+        .welcome{
+            background:white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom:30px;
+            box-shadow:0.5px 20px rgba(0,0,0,0.1);
+        }
+
+        .welcome h2{
+            color:#0d47a1;
+            margin-bottom:15px;
+        }
+
+        /*BUTTONS*/
+        .btn{
+            display:inline-block;
+            padding:12px 25px;
+            margin: 10px 5px;
+            border: none;
+            border-radius: 25px;
+            background: #1976d2;
+            color:white;
+            text-decoration:none;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        .btn:hover{
+            background:#0d47a1;
+            transform: scale(1.05);
+        }
+        
+        .success{
+            background:#2e7d32;
+        }
+
+        .danger{
+            background:#d32f2f;
+        }
+
+        /*TABLE*/
+        .table-section{
+            background:white;
+            padding:25px;
+            border-radius:15px;
+            margin-bottom:30px;
+            box-shadow:05px 20px rgba(0,0,0,0.1);
+        }
+
+        .table-section h2{
+            text-align:center;
+            color:#0d47a1;
+            margin-bottom:20px;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        th{
+            background:#1976d2;
+            color:white;
+            padding:15px;
+            
+        }
+
+        td{
+            padding:13px;
+            text-align:center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover{
+            background:#eef5ff;
+        }
+
+        /*CARDS*/
+        .cards{
+            display:flex;
+            gap:20px;
+            flex-wrap:wrap;
+            margin-bottom:30px;
+        }
+
+        .card{
+            flex:1;
+             min-width:250px;
+            background:white;
+            padding:25px;
+            border-radius:15px;
+            text-align:center;
+            box-shadow:0.5px 20px rgba(0,0,0,0.1);
+        }
+
+        .card.emoji{
+            font-size:45px;
+        }
+
+        .card h3{
+             color:#0d47a1;
+            margin:15px 0;
+        }
+
+        /*FORM*/
+        .form-section{
+            background:white;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0.5px 20px rgba(0,0,0,0.1);
+        }
+
+        .form-section h2{
+            text-align:center;
+            color:#0d47a1;
+            margin-bottom:20px;
+        }
+
+        label{
+            display:block;
+            margin-bottom:10px;
+            font-weight:bold;
+        }
+
+        input,
+        select,
+        textarea{
+            width:100%;
+            padding:12px;
+            margin-bottom:7px;
+            border:1px solid #ccc;
+            border-radius:8px;
+            font-size:15px;
+        }
+
+        textarea{
+            height:120px;
+            resize:vertical;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus{
+            border-color:#1976d2;
+            outline:none;
+            box-shadow:0 0 5px rgba(25,118,210,0.3);
+        }
+
+        .submit-btn{
+            width:100%;
+            margin-top:20px;
+            background:#0d47a1;
+            color:white;
+            border:none;
+            padding:15px;
+            border-radius:8px;
+            font-size:17px;
+            cursor:pointer;
+        }
+
+        .submit-btn:hover{
+            background:#1976d2;
+        }
+
+        /*FOOTER*/
+        footer{
+            background:#082c5c;
+            color:white;
+            text-align:center;
+            padding:25px;
+            margin-top:30px;
+        }
+
+        /*MOBILE RESPONSIVENESS*/
+        @media(max-width:600px){
+
+            header h1{
+                font-size:28px;
+            }
+
+            nav a{
+                display:block;
+                margin: 10px;
+            }
+
+            .container{
+                width:94%
+            }
+
+            table{
+                font-size:13px;
+            }
+
+            th,
+            td{
+                padding:8px;
+            }
+        }
+
+    </style>
+<body>
+
+    <!--HEADER-->
+
+    <header>
+        <h1>My Beautiful Website</h1>
+
+        <p>Welcome to my simple HTML & CSS project!</p>
+
+    </header>
+
+    <!--NAVIGATION-->
+
+    <nav>
+        <a href="#home">HOME</a>
+        <a href="#services">Services</a>
+        <a href="#student">Table</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main class="container">
+
+        <!--WELCOME-->
+        <section class="welcome" id="home">
+            <h2>WELCOME</h2>
+            <p>
+                This is a simple website created using
+                HTML and CSS.It demonstartes tables,
+                buttons,forms,emojis and responsive design.
+            </p>
+
+            <br>
+
+            <a href="#contact" class="btn">
+                Get Started
+            </a>
+
+            <button class="btn success">
+                Like
+            </button>
+
+            <button class="btn danger">
+                Cancel
+            </button>
+        </section>
+
+        <!--CARDS-->
+
+        <section id="services"
+
+        <div class="cards">
+            <div class="card">
+                <div class="emoji">
+                <div>class="emoji">💻</div>
+                <h3>Web Design</h3>
+                <p>
+                    We create simple and beautiful
+                    websites.
+                    
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="emoji">📱</div>
+                <h3>UI/UI Design</h3>
+                <p>
+                    We design attractive and
+                    user-friendly interfaces.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="emoji">📱</div>
+                <h3>Mobile Design</h3>
+                <p>
+                    We create responsive designs
+                    for mobile devices.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!--TABLE-->
+    <section class="table-section" id="student">
+        <h2>STUDENT TABLE</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Course</th>
+                    <th>Marks</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>John</td>
+                    <td>HTML</td>
+                    <td>85</td>
+                    <td>A</td>
+                </tr>
+
+                <tr>
+                    <td>Mary</td>
+                    <td>CSS</td>
+                    <td>78</td>
+                    <td>B</td>
+                </tr>
+
+                <tr>
+                    <td>David</td>
+                    <td>Python</td>
+                    <td>92</td>
+                    <td>A</td>
+                </tr>
+
+                <tr>
+                    <td>Sarah</td>
+                    <td>C++</td>
+                    <td>65</td>
+                    <td>C</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+    </section>
+
+    <!--FORM-->
+    <section class="form-section"id="contact">
+        <h2> Contact Us</h2>
+        <form>
+            <label for="name">
+                Full Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your name"
+              required
+            >
+
+            <label for="email">
+             Email Address
+            </label>
+
+            <input
+             type="email"
+             id="email"
+             placeholder="Enter your email"
+             required
+            >
+
+            <label for="course">
+              Select Course
+            </label>
+
+            <select id="course">
+                <option>HTML & CSS</option>
+                <option>Python</option>
+                <option>C++</option>
+                <option>UI/UX Design</option>
+            </select>
+
+            <label for="message">
+                Message
+            </label>
+
+            <textarea
+             id="message"
+             placeholder="Enter your message..."
+            ></textarea>
+
+            <button
+               type="submit" 
+               class="submit-btn">
+                Submit Form
+            </button>
+        </form>
+        </section>
+    </main>
+    <!--FOOTER-->
+    <footer>
+        <p>My Beautiful Website</p>
+        <p>2026 ALL Rights Reserved</p>
+    </footer>
+</body>
+</html>
+            
+            
